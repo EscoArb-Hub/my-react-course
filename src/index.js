@@ -176,5 +176,34 @@ const cards = (
   </>
 );
 
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(cards);
+
+
+//! 6.4 КОМПОНЕНТ - функція з даними на вході та розміткою на виході
+//? ❗️❗️❗️ Ім'я функції має бути ОБОВ'ЯЗКОВО з Великої літери ❗️❗️❗️
+function Painting(props) {
+  // function Painting({ url, title, author, profileUrl, price }) {
+  console.log("props:", props);
+  const { url, title, author, profileUrl, price } = props;
+  return <div>
+    <img src={url} alt={title} width="480" />
+    <h2>{title}</h2>
+    <p>Автор: <a href={profileUrl}>{author}</a></p>
+    <p>Цена: {price} кредитов</p>
+    <p>Доступность: заканчивается или есть в наличии</p>
+    <button type="button">Додати до кошику</button>
+  </div>
+};
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(cards);
+// root.render(<Painting a="5" b={10} />);
+root.render(
+  <Painting
+    url={painting0.url}
+    title={painting0.title}
+    author={painting0.author.tag}
+    profileUrl={painting0.author.url}
+    price={painting0.price}
+  />);
+
