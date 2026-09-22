@@ -102,7 +102,7 @@ console.log("painting0:", painting0)
 // root.render(element);
 
 
-//! 6.1 - Компонент `Painting`
+//! 6.1 - Елемент `painting`
 // * HTML-розмітка:
 {/* <div>
   <img src="" alt="" width="480" >
@@ -130,7 +130,7 @@ console.log("painting0:", painting0)
 // root.render(painting);
 
 
-//! 6.3 - 3 Компонента `Painting` з json
+//! 6.3 - 3 Елемента `painting` з json
 const data0 = paintings[0];
 const data1 = paintings[1];
 const data2 = paintings[2];
@@ -182,6 +182,7 @@ const cards = (
 
 //! 6.4 КОМПОНЕНТ - функція з даними на вході та розміткою на виході
 //? ❗️❗️❗️ Ім'я функції має бути ОБОВ'ЯЗКОВО з Великої літери ❗️❗️❗️
+// const MyFunctionalComponent = props => <div>Functional Component</div>;
 function Painting(props) {
   // function Painting({ url, title, author, profileUrl, price }) {
   console.log("props:", props);
@@ -197,13 +198,33 @@ function Painting(props) {
 };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// root.render(<MyFunctionalComponent a="5" b={10} />)
 // root.render(<Painting a="5" b={10} />);
 root.render(
-  <Painting
-    url={painting0.url}
-    title={painting0.title}
-    author={painting0.author.tag}
-    profileUrl={painting0.author.url}
-    price={painting0.price}
-  />);
+  <>
+    <Painting
+      url={data0.url}
+      title={data0.title}
+      author={data0.author.tag}
+      profileUrl={data0.author.url}
+      price={data0.price}
+    />
+    <Painting
+      url={data1.url}
+      title={data1.title}
+      author={data1.author.tag}
+      profileUrl={data1.author.url}
+      price={data1.price}
+    />
+    <Painting
+      url={data2.url}
+      title={data2.title}
+      author={data2.author.tag}
+      profileUrl={data2.author.url}
+      price={data2.price}
+    />
+  </>
+);
+
 
