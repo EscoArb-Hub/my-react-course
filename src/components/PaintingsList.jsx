@@ -6,8 +6,11 @@ export default function PaintingsList({ items }) {
     // console.log("props:", props);
     // const { url, title, author, profileUrl, price } = props;
     return <ul>
-        {items.map(item =>
-            <li>
+        {items.map((item, index) =>
+            // ✅✅
+            <li key={item.id} >
+                {/* ✅ */}
+                {/* <li key={index} > */}
                 <PaintingItem
                     url={item.url}
                     title={item.title}
