@@ -58,7 +58,7 @@ export default function App() {
         //     </div>
         // </>
         <>
-            {paintings.map(painting =>
+            {/* {paintings.map(painting =>
                 <PaintingsList
                     url={painting.url}
                     title={painting.title}
@@ -66,7 +66,8 @@ export default function App() {
                     profileUrl={painting.author.url}
                     price={painting.price}
                 />
-            )}
+            )} */}
+            <PaintingsList items={paintings} />
         </>
     );
 };
