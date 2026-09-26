@@ -1,14 +1,16 @@
 import PaintingsList from './components/PaintingsList';
 
+import Section from './components/Section';
+
 
 import paintings from "./json/paintings.json";
 console.log("paintings:", paintings)
 
 
 export default function App() {
-    const data0 = paintings[0];
-    const data1 = paintings[1];
-    const data2 = paintings[2];
+    // const data0 = paintings[0];
+    // const data1 = paintings[1];
+    // const data2 = paintings[2];
 
     // function Painting(props) {
     //     // function Painting({ url, title, author, profileUrl, price }) {
@@ -67,7 +69,10 @@ export default function App() {
                     price={painting.price}
                 />
             )} */}
-            <PaintingsList items={paintings} />
+            {/* <PaintingsList items={paintings} /> */}
+            <Section title="Колекція картин - 1">
+                <PaintingsList items={paintings} />
+            </Section>
         </>
     );
 };
