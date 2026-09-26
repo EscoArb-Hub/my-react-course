@@ -24,28 +24,54 @@ export default function App() {
     //     </div>
     // };
     return (
+        // <>
+        //     <PaintingsList
+        // url={data0.url}
+        // title={data0.title}
+        // author={data0.author.tag}
+        // profileUrl={data0.author.url}
+        // price={data0.price}
+        //     />
+        //     <PaintingsList
+        //         url={data1.url}
+        //         title={data1.title}
+        //         author={data1.author.tag}
+        //         profileUrl={data1.author.url}
+        //         price={data1.price}
+        //     />
+        //     <PaintingsList
+        //         url={data2.url}
+        //         title={data2.title}
+        //         author={data2.author.tag}
+        //         profileUrl={data2.author.url}
+        //         price={data2.price}
+        //     />
+        // </>
+        // <>
+        //     <h1>15.Рендер колекції за допомогою .map</h1>
+        //     <div>
+        //         [1,2,3,4,5]
+        //         <br />
+        //         {[1, 2, 3, 4, 5]}
+        //         <br />
+        //         {[1, 2, 3, 4, 5].map(el => <div>{el}</div>)}
+        //     </div>
+        // </>
         <>
-            <PaintingsList
-                url={data0.url}
-                title={data0.title}
-                author={data0.author.tag}
-                profileUrl={data0.author.url}
-                price={data0.price}
-            />
-            <PaintingsList
-                url={data1.url}
-                title={data1.title}
-                author={data1.author.tag}
-                profileUrl={data1.author.url}
-                price={data1.price}
-            />
-            <PaintingsList
-                url={data2.url}
-                title={data2.title}
-                author={data2.author.tag}
-                profileUrl={data2.author.url}
-                price={data2.price}
-            />
+            {paintings.map(painting =>
+                <PaintingsList
+                    url={painting.url}
+                    title={painting.title}
+                    author={painting.author.tag}
+                    profileUrl={painting.author.url}
+                    price={painting.price}
+                />
+            )}
         </>
     );
 };
+
+
+// const markup = technologies
+//     .map((technology) => `<li class="list-item">${technology}</li>`)
+//     .join("");
