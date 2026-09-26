@@ -1,9 +1,9 @@
-
+import defaultImage from "./image.png" //! Дефолтне зображення
 
 export default function PaintingItem({
-    url,
+    url = defaultImage,
     title,
-    author,
+    author = "не відомо",
     profileUrl,
     price }) {
     return (

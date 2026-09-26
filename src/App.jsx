@@ -70,7 +70,7 @@ export default function App() {
                 />
             )} */}
             {/* <PaintingsList items={paintings} /> */}
-            <Section title="Колекція картин - 1">
+            <Section title="Колекція картин">
                 <PaintingsList items={paintings} />
             </Section>
         </>
