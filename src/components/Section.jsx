@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 
 
 export default function Section({ title, children }) {
@@ -6,5 +8,12 @@ export default function Section({ title, children }) {
             <h2>{title}</h2>
             {children}
         </section>
+        
     )
 }
+
+
+Section.propTypes = {
+    title: PropTypes.number,
+    children: PropTypes.node,
+};

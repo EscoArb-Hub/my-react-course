@@ -25,6 +25,7 @@ export default function App() {
     //         <button type="button">Додати до кошику</button>
     //     </div>
     // };
+    const isOnline = true;
     return (
         // <>
         //     <PaintingsList
@@ -73,6 +74,14 @@ export default function App() {
             <Section title="Колекція картин">
                 <PaintingsList items={paintings} />
             </Section>
+
+            {/* {isOnline && "ONline"}
+            <br />
+            {null ? "ONline" : "OFFline"}
+            {false}
+            {null}
+            {undefined} */}
+
         </>
     );
 };
