@@ -1,10 +1,14 @@
-import PaintingsList from './components/PaintingsList';
-
 import Section from './components/Section';
+import PaintingsList from './components/PaintingsList';
+import PlanesList from './components/PlanesList';
 
 
 import paintings from "./json/paintings.json";
+
+import planes from "./json/planes.json";
+
 console.log("paintings:", paintings)
+console.log("planes:", planes)
 
 
 export default function App() {
@@ -73,6 +77,10 @@ export default function App() {
             {/* <PaintingsList items={paintings} /> */}
             <Section title="Колекція картин">
                 <PaintingsList items={paintings} />
+            </Section>
+
+            <Section title="Колекція літаків">
+                <PlanesList items={planes} />
             </Section>
 
             {/* {isOnline && "ONline"}
